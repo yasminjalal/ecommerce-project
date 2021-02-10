@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/category" android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_contact_with_us"
+            android:icon="@drawable/ic_call_accent_24dp"
+            android:title="اتصل بنا" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_error_accent_24dp"
+            android:title="عنا" />
+        <item
+            android:title=" "
+            android:id="@+id/nav_footer"
+            app:actionLayout="@layout/footer_navigation_menu" />
+    </group>
+</menu>

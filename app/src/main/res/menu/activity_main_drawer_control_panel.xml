@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/controlPanel" android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_orders"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="طلبات الشراء" />
+    <item
+        android:id="@+id/nav_shipments_track"
+        android:icon="@drawable/ic_location_on_accent_24dp"
+        android:title="تتبع الشحنات" />
+    <item
+        android:id="@+id/nav_shipping_address"
+        android:icon="@drawable/ic_check_box_accent_24dp"
+        android:title="عناوين الشحن" />
+    <item
+        android:id="@+id/nav_favorite_products"
+        android:icon="@drawable/ic_favorite_accent_24dp"
+        android:title="منتجات أعجبتني" />
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/ic_settings_accent_24dp"
+        android:title="حسابي" />
+
+    <item
+        android:id="@+id/nav_sign_out"
+        android:icon="@drawable/ic_power_settings_new_accent_24dp"
+        android:title="تسجيل خروج" />
+    </group>
+</menu>

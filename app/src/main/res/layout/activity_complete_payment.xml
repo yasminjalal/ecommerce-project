@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.android.Cart.CompletePaymentActivity">
+
+    <include
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="هل لديك كوبون؟"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext">
+
+
+                    <EditText
+                        android:id="@+id/editTextCompletePaymentCoupon"
+                        android:layout_width="0dp"
+                        android:layout_height="33dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/textColor"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:lines="1"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/lightGray" />
+
+                    <Button
+                        android:id="@+id/buttonCompletePaymentCheckCoupon"
+                        android:layout_width="55dp"
+                        android:layout_height="33dp"
+                        android:background="@android:color/transparent"
+                        android:text="تحقق"
+                        android:textColor="@color/colorAccent" />
+
+                    <Button
+                        android:id="@+id/buttonCompletePaymentCancelCoupon"
+                        android:layout_width="55dp"
+                        android:layout_height="33dp"
+                        android:background="@android:color/transparent"
+                        android:text="إلغاء"
+                        android:visibility="gone"
+                        android:textColor="@color/colorAccent" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutShowPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="لديك "
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext">
+
+
+                    <TextView
+                        android:id="@+id/editTextCompletePaymentShowPoints"
+                        android:layout_width="0dp"
+                        android:layout_height="33dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/lightGray" />
+
+                    <Button
+                        android:id="@+id/buttonCompletePaymentReplacePoints"
+                        android:layout_width="55dp"
+                        android:layout_height="33dp"
+                        android:background="@android:color/transparent"
+                        android:text="استبدال"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonCompletePaymentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_edit_text_states"
+                android:drawableStart="@drawable/ic_local_shipping_accent_24dp"
+                android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                android:hint="اختر العنوان"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/buttonCompletePaymentType"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_edit_text_states"
+                android:drawableStart="@drawable/ic_payment_accent_24dp"
+                android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                android:hint="اختر طريقة الدفع"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCompletePayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0.5dp"-->
+                    <!--android:background="@color/lightGray" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="مجموع المنتجات شامل الضريبة" />
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/textColor"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="مجموع المنتجات غير شامل الضريبة" />
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentTotalWithoutVat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/textColor"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCompletePaymentCoupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="خصم الكوبون" />
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentCoupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/textColor"
+                        android:text="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayoutCompletePaymentPointsDiscounts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="خصم النقاط" />
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentPointsDiscounts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textColor"
+                        android:gravity="left"
+                        android:text="" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/activity_horizontal_margin"
+                        android:text="المجموع"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentTotalAfterDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تكلفة الشحن" />
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentShippingFees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/textColor"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCompletePaymentCashOnDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تكلفة خدمة الدفع عند الاستلام" />
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentCashOnDeliveryFees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/textColor"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ضريبة القيمة المضافة (5%)" />
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentVAT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/textColor"
+                        android:text="" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/activity_horizontal_margin"
+                        android:text="إجمالي قيمة طلب الشراء"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textViewCompletePaymentBill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lightGray" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_button_status"
+                android:text="إتمام الدفع"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

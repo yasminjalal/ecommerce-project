@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "174135879448",
+    "firebase_url": "https://atmari-2461f.firebaseio.com",
+    "project_id": "atmari-2461f",
+    "storage_bucket": "atmari-2461f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174135879448:android:a5d2e1e88e1e3e64",
+        "android_client_info": {
+          "package_name": "com.example.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174135879448-7s877nd791ug3gv72hh6rik17oosau0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc9crTXoiqyJtNiv_fgUJHOotTORVjZv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174135879448-7s877nd791ug3gv72hh6rik17oosau0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="200dp"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+<RelativeLayout
+    android:id="@+id/relativeLayout_recycle_view_related_product_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_RelatedProduct1"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:id="@+id/imageview_recycle_view_related_product_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView_recycle_view_related_product_item_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginVertical="60dp"
+            android:background="@drawable/rounded_rectangle_accent_color"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView_recycle_view_related_product_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeLayout_RelatedProduct1"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="11dp" />
+
+
+    <TextView
+        android:id="@+id/textView_recycle_view_related_product_item_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_recycle_view_related_product_item_title"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/textColor"
+        android:textSize="12dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_recycle_view_related_product_item_addToCart"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView_recycle_view_related_product_item_addToCart"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_shopping_cart_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarCart"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/imageView_recycle_view_related_product_item_addToCart"
+                    android:layout_alignTop="@+id/imageView_recycle_view_related_product_item_addToCart"
+                    android:layout_centerInParent="true"
+                    android:elevation="2dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/colorAccent"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout_recycle_view_related_product_item_like"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView_recycle_view_related_product_item_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_favorite_border_accent_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarFavourite"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/imageView_recycle_view_related_product_item_like"
+                    android:layout_alignTop="@+id/imageView_recycle_view_related_product_item_like"
+                    android:layout_centerInParent="true"
+                    android:elevation="2dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/colorAccent"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>
