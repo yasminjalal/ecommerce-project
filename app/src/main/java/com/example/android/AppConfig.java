@@ -10,8 +10,7 @@ import android.graphics.drawable.LayerDrawable;
  */
 
 public class AppConfig {
-
-
+    
     // Server url
     private static final String URL_SERVER = "";
 
