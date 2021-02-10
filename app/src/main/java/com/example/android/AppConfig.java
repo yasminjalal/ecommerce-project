@@ -9,8 +9,9 @@ import android.graphics.drawable.LayerDrawable;
  * Created by Yasmin Jalal - 2020.
  */
 
+
 public class AppConfig {
-    
+
     // Server url
     private static final String URL_SERVER = "";
 
